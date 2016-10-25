@@ -1,23 +1,21 @@
 <html>
 
     <head>
-        <meta charset="utf-8"/>
+        <meta charset="utf-8" />
         <script src="bower_components/angular/angular.js"></script>
         <script src="bower_components/angular-resource/angular-resource.js"></script>
         <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 
         <script src="app/main.js"></script>
+        <script src="app/routes.js"></script>
+
+        <script src="app/institutions/controllers.js"></script>
+        <script src="app/institutions/routes.js"></script>
     </head>
 
     <body ng-app="Main">
         <div ng-controller="MainController">
-            <table>
-                <tr ng-repeat="institution in institutions">
-                    <td>{{ institution.name }}</td>
-                    <td>{{ institution.adress }}</td>
-                    <td><a href="#">Acessar</a></td>
-                </tr>
-            </table>
+            <div ui-view></div>
         </div>
     </body>
 
